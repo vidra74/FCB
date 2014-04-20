@@ -4,3 +4,6 @@ FCB - Incredible Ping Machine Server & Klijent
 - Pokrenuo projekt
 - Upload datoteka Klijenta
 - Upload datoteka Servera
+
+20.4.2014
+- Skripta za ažuriranje GitHub datoteka

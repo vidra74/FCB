@@ -30,7 +30,7 @@ object FrmPingMachine: TFrmPingMachine
     OnClick = btnServerClick
   end
   object sckVeza: TSocketConnection
-    ServerGUID = '{D4980FB3-9756-4306-902E-1C0BC9C327F8}'
+    ServerGUID = '{9BFFC120-AC42-4069-8A16-21BA0DA5B59F}'
     Address = '127.0.0.1'
     Left = 48
     Top = 80
