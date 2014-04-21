@@ -29,10 +29,24 @@ object FrmPingMachine: TFrmPingMachine
     TabOrder = 0
     OnClick = btnServerClick
   end
-  object sckVeza: TSocketConnection
-    ServerGUID = '{9BFFC120-AC42-4069-8A16-21BA0DA5B59F}'
-    Address = '127.0.0.1'
-    Left = 48
-    Top = 80
+  object TcpConnection: TSQLConnection
+    DriverName = 'Datasnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=DBXDataSnap'
+      'HostName=localhost'
+      'Port=21112'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=15.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'Filters={}'
+      'User_Name=Klijent')
+    Connected = True
+    Left = 232
+    Top = 24
+    UniqueId = '{9778A128-2C32-456D-9240-D3F87696FE9C}'
   end
 end

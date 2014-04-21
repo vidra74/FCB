@@ -2,7 +2,8 @@ program klijent;
 
 uses
   Forms,
-  untPingMachine in 'untPingMachine.pas' {FrmPingMachine};
+  untPingMachine in 'untPingMachine.pas' {FrmPingMachine},
+  untServerMethodsClient in 'untServerMethodsClient.pas';
 
 {$R *.res}
 

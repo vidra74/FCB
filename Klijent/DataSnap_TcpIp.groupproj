@@ -9,6 +9,15 @@
 			<Projects Include="..\Server\Server.dproj">
 				<Dependencies/>
 			</Projects>
+			<Projects Include="..\DS\DSForma.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\DSConsole\DSKonzola.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\DSServis\DSServis.dproj">
+				<Dependencies/>
+			</Projects>
 		</ItemGroup>
 		<ProjectExtensions>
 			<Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +44,41 @@
 		<Target Name="Server:Make">
 			<MSBuild Projects="..\Server\Server.dproj" Targets="Make"/>
 		</Target>
+		<Target Name="DSForma">
+			<MSBuild Projects="..\DS\DSForma.dproj"/>
+		</Target>
+		<Target Name="DSForma:Clean">
+			<MSBuild Projects="..\DS\DSForma.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="DSForma:Make">
+			<MSBuild Projects="..\DS\DSForma.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="DSKonzola">
+			<MSBuild Projects="..\DSConsole\DSKonzola.dproj"/>
+		</Target>
+		<Target Name="DSKonzola:Clean">
+			<MSBuild Projects="..\DSConsole\DSKonzola.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="DSKonzola:Make">
+			<MSBuild Projects="..\DSConsole\DSKonzola.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="DSServis">
+			<MSBuild Projects="..\DSServis\DSServis.dproj"/>
+		</Target>
+		<Target Name="DSServis:Clean">
+			<MSBuild Projects="..\DSServis\DSServis.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="DSServis:Make">
+			<MSBuild Projects="..\DSServis\DSServis.dproj" Targets="Make"/>
+		</Target>
 		<Target Name="Build">
-			<CallTarget Targets="klijent;Server"/>
+			<CallTarget Targets="klijent;Server;DSForma;DSKonzola;DSServis"/>
 		</Target>
 		<Target Name="Clean">
-			<CallTarget Targets="klijent:Clean;Server:Clean"/>
+			<CallTarget Targets="klijent:Clean;Server:Clean;DSForma:Clean;DSKonzola:Clean;DSServis:Clean"/>
 		</Target>
 		<Target Name="Make">
-			<CallTarget Targets="klijent:Make;Server:Make"/>
+			<CallTarget Targets="klijent:Make;Server:Make;DSForma:Make;DSKonzola:Make;DSServis:Make"/>
 		</Target>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
 	</Project>

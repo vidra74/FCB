@@ -1,7 +1,7 @@
 ﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 		<PropertyGroup>
-			<ProjectGuid>{85655E03-0AA8-4E12-8D5E-4EAC1518AEB4}</ProjectGuid>
-			<MainSource>klijent.dpr</MainSource>
+			<ProjectGuid>{BA129E9B-31FE-4BED-B7BF-3F937FEBB5EE}</ProjectGuid>
+			<MainSource>DSForma.dpr</MainSource>
 			<ProjectVersion>12.3</ProjectVersion>
 			<Base>True</Base>
 			<Config Condition="'$(Config)'==''">Debug</Config>
@@ -46,13 +46,21 @@
 			<DCC_DebugInformation>false</DCC_DebugInformation>
 		</PropertyGroup>
 		<ItemGroup>
-			<DelphiCompile Include="klijent.dpr">
+			<DelphiCompile Include="DSForma.dpr">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
-			<DCCReference Include="untPingMachine.pas">
-				<Form>FrmPingMachine</Form>
+			<DCCReference Include="DSForm.pas">
+				<Form>FrmDS</Form>
 			</DCCReference>
-			<DCCReference Include="untServerMethodsClient.pas"/>
+			<DCCReference Include="DSMethods.pas">
+				<Form>ServerMethods2</Form>
+				<DesignClass>TDSServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSContainer.pas">
+				<Form>ServerContainer2</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="untLogger.pas"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -100,15 +108,12 @@
 						<VersionInfoKeys Name="Comments"/>
 					</VersionInfoKeys>
 					<Source>
-						<Source Name="MainSource">klijent.dpr</Source>
+						<Source Name="MainSource">DSForma.dpr</Source>
 					</Source>
 				</Delphi.Personality>
 				<Platforms>
 					<Platform value="Win32">True</Platform>
 				</Platforms>
-				<DataSnapProxyLookup>
-					<untServerMethodsClient>{9778A128-2C32-456D-9240-D3F87696FE9C}</untServerMethodsClient>
-				</DataSnapProxyLookup>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>
 		</ProjectExtensions>

@@ -4,12 +4,7 @@ echo "Sredi Klijent projekt" >> D:\gitUpdate.txt
 
 cd "D:\GitHub\FCB\Klijent" >> D:\gitUpdate.txt
 
-del *.pas >> D:\gitUpdate.txt
-del *.dfm >> D:\gitUpdate.txt
-del *.res >> D:\gitUpdate.txt
-del *.dpr >> D:\gitUpdate.txt
-del *.dproj >> D:\gitUpdate.txt
-del *.groupproj >> D:\gitUpdate.txt
+call ..\GitProjDel.bat
 
 cd "D:\Delphi_XE_Projekti\DataSnap_TcpIp\Klijent" >> D:\gitUpdate.txt
 
@@ -24,29 +19,59 @@ cd "D:\GitHub\FCB\Klijent" >> D:\gitUpdate.txt
 
 dir >> D:\gitUpdate.txt 
 
-echo "Sredi Server projekt" >> D:\gitUpdate.txt
+echo "Sredi DS projekt" >> D:\gitUpdate.txt
 
-cd "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
+cd "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
 
-del *.pas >> D:\gitUpdate.txt
-del *.dfm >> D:\gitUpdate.txt
-del *.res >> D:\gitUpdate.txt
-del *.ridl >> D:\gitUpdate.txt
-del *.tlb >> D:\gitUpdate.txt
-del *.dpr >> D:\gitUpdate.txt
-del *.dproj >> D:\gitUpdate.txt
+call ..\GitProjDel.bat
 
-cd "D:\Delphi_XE_Projekti\DataSnap_TcpIp\Server" >> D:\gitUpdate.txt 
+cd "D:\Delphi_XE_Projekti\DataSnap_TcpIp\DS" >> D:\gitUpdate.txt 
 
-copy *.pas "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
-copy *.dfm "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
-copy *.res "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
-copy *.ridl "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
-copy *.tlb "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
-copy *.dpr "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
-copy *.dproj "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
+copy *.pas "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
+copy *.dfm "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
+copy *.res "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
+copy *.ridl "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
+copy *.tlb "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
+copy *.dpr "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
+copy *.dproj "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
 
-cd "D:\GitHub\FCB\Server" >> D:\gitUpdate.txt
+cd "D:\GitHub\FCB\DS" >> D:\gitUpdate.txt
+
+echo "Sredi DS konzola projekt" >> D:\gitUpdate.txt
+
+cd "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+
+call ..\GitProjDel.bat
+
+cd "D:\Delphi_XE_Projekti\DataSnap_TcpIp\DSConsole" >> D:\gitUpdate.txt 
+
+copy *.pas "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+copy *.dfm "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+copy *.res "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+copy *.ridl "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+copy *.tlb "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+copy *.dpr "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+copy *.dproj "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+
+cd "D:\GitHub\FCB\DSConsole" >> D:\gitUpdate.txt
+
+echo "Sredi DS servis projekt" >> D:\gitUpdate.txt
+
+cd "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+
+call ..\GitProjDel.bat
+
+cd "D:\Delphi_XE_Projekti\DataSnap_TcpIp\DSServis" >> D:\gitUpdate.txt 
+
+copy *.pas "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+copy *.dfm "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+copy *.res "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+copy *.ridl "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+copy *.tlb "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+copy *.dpr "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+copy *.dproj "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
+
+cd "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
 
 dir >> D:\gitUpdate.txt
 

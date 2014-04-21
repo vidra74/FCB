@@ -1,7 +1,12 @@
-FCB - Incredible Ping Machine Server & Klijent
+﻿FCB - Incredible Ping Machine Server & Klijent
+
+21.4.2014
+- Izbrisan server projekt
+- Kreirani projekti za VCL Server, konzolu i Windows servis
+- Ažurirana skripta za prijenos
 
 20.4.2014
-- Skripta za a�uriranje GitHub datoteka
+- Skripta za ažuriranje GitHub datoteka
 - Uključen gitignore za Delphi projekte
 
 17.4.2014
