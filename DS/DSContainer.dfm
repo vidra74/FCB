@@ -10,7 +10,7 @@ object DSContainer: TDSContainer
     HideDSAdmin = False
     OnTrace = DSServerTrace
     Left = 96
-    Top = 11
+    Top = 19
   end
   object DSTCPServerTransport1: TDSTCPServerTransport
     Port = 21112
@@ -28,13 +28,13 @@ object DSContainer: TDSContainer
     CacheContext = 'cache/'
     Trace = DSHTTPService1Trace
     Server = DSServer
-    DSHostname = 'localhost'
+    DSHostname = '127.0.0.1'
     DSPort = 211
     Filters = <>
     AuthenticationManager = DSAuthenticationManager1
     CredentialsPassThrough = False
     SessionTimeout = 1200000
-    HttpPort = 8080
+    HttpPort = 4048
     Active = False
     Left = 96
     Top = 135

@@ -6,9 +6,6 @@
 			<Projects Include="klijent.dproj">
 				<Dependencies/>
 			</Projects>
-			<Projects Include="..\Server\Server.dproj">
-				<Dependencies/>
-			</Projects>
 			<Projects Include="..\DS\DSForma.dproj">
 				<Dependencies/>
 			</Projects>
@@ -16,6 +13,9 @@
 				<Dependencies/>
 			</Projects>
 			<Projects Include="..\DSServis\DSServis.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="..\HttpKlijent\HttpKlijent.dproj">
 				<Dependencies/>
 			</Projects>
 		</ItemGroup>
@@ -34,15 +34,6 @@
 		</Target>
 		<Target Name="klijent:Make">
 			<MSBuild Projects="klijent.dproj" Targets="Make"/>
-		</Target>
-		<Target Name="Server">
-			<MSBuild Projects="..\Server\Server.dproj"/>
-		</Target>
-		<Target Name="Server:Clean">
-			<MSBuild Projects="..\Server\Server.dproj" Targets="Clean"/>
-		</Target>
-		<Target Name="Server:Make">
-			<MSBuild Projects="..\Server\Server.dproj" Targets="Make"/>
 		</Target>
 		<Target Name="DSForma">
 			<MSBuild Projects="..\DS\DSForma.dproj"/>
@@ -71,14 +62,23 @@
 		<Target Name="DSServis:Make">
 			<MSBuild Projects="..\DSServis\DSServis.dproj" Targets="Make"/>
 		</Target>
+		<Target Name="HttpKlijent">
+			<MSBuild Projects="..\HttpKlijent\HttpKlijent.dproj"/>
+		</Target>
+		<Target Name="HttpKlijent:Clean">
+			<MSBuild Projects="..\HttpKlijent\HttpKlijent.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="HttpKlijent:Make">
+			<MSBuild Projects="..\HttpKlijent\HttpKlijent.dproj" Targets="Make"/>
+		</Target>
 		<Target Name="Build">
-			<CallTarget Targets="klijent;Server;DSForma;DSKonzola;DSServis"/>
+			<CallTarget Targets="klijent;DSForma;DSKonzola;DSServis;HttpKlijent"/>
 		</Target>
 		<Target Name="Clean">
-			<CallTarget Targets="klijent:Clean;Server:Clean;DSForma:Clean;DSKonzola:Clean;DSServis:Clean"/>
+			<CallTarget Targets="klijent:Clean;DSForma:Clean;DSKonzola:Clean;DSServis:Clean;HttpKlijent:Clean"/>
 		</Target>
 		<Target Name="Make">
-			<CallTarget Targets="klijent:Make;Server:Make;DSForma:Make;DSKonzola:Make;DSServis:Make"/>
+			<CallTarget Targets="klijent:Make;DSForma:Make;DSKonzola:Make;DSServis:Make;HttpKlijent:Make"/>
 		</Target>
 		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
 	</Project>

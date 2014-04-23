@@ -73,6 +73,24 @@ copy *.dproj "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
 
 cd "D:\GitHub\FCB\DSServis" >> D:\gitUpdate.txt
 
+echo "Sredi Http Klijent projekt" >> D:\gitUpdate.txt
+
+cd "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+
+call ..\GitProjDel.bat
+
+cd "D:\Delphi_XE_Projekti\DataSnap_TcpIp\HttpKlijent" >> D:\gitUpdate.txt 
+
+copy *.pas "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+copy *.dfm "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+copy *.res "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+copy *.ridl "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+copy *.tlb "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+copy *.dpr "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+copy *.dproj "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+
+cd "D:\GitHub\FCB\HttpKlijent" >> D:\gitUpdate.txt
+
 dir >> D:\gitUpdate.txt
 
 cd "D:\GitHub\FCB" >> D:\gitUpdate.txt
