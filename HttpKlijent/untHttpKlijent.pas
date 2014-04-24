@@ -51,7 +51,7 @@ procedure TFrmHttpKlijent.btnServerClick(Sender: TObject);
 var
   Server: TDSMethodsClient;
 begin
-
+  Connection.Connected := True;
   Server := TDSMethodsClient.Create(Connection.DBXConnection);
   try
     lblPorukaServer.Caption := Server.ReverseString(edtTekst.Text);
