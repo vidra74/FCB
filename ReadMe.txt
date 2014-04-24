@@ -1,5 +1,8 @@
 ﻿FCB - Incredible Ping Machine Server & Klijent
 
+24.4.2014
+- Http klijent otvara automatski Http konekciju
+
 23.4.2014
 - Promijenio Tcp/Ip port na 2112
 - promijenio Http port na 4048
