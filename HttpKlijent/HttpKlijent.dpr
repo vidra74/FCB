@@ -3,7 +3,8 @@ program HttpKlijent;
 uses
   Forms,
   untHttpKlijent in 'untHttpKlijent.pas' {FrmHttpKlijent},
-  untHttpMetode in 'untHttpMetode.pas';
+  untHttpMetode in 'untHttpMetode.pas',
+  untParametarskaDatoteka in 'untParametarskaDatoteka.pas';
 
 {$R *.res}
 

@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBXDataSnap, DBXCommon, DSHTTPLayer, DB, SqlExpr;
+  Dialogs, StdCtrls, DBXDataSnap, DBXCommon, DSHTTPLayer, DB, SqlExpr,
+      untParametarskaDatoteka;
 
 type
   TFrmHttpKlijent = class(TForm)
@@ -14,13 +15,17 @@ type
     lblPorukaServer: TLabel;
     edtTekst: TEdit;
     Connection: TSQLConnection;
+    OpenDialog: TOpenDialog;
     procedure btnCloseClick(Sender: TObject);
     procedure btnLogClick(Sender: TObject);
     procedure btnServerClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    Parametri: TParameterFile;
   end;
 
 var
@@ -39,12 +44,11 @@ begin
 end;
 
 procedure TFrmHttpKlijent.btnLogClick(Sender: TObject);
-var
-  filename, parameters: String;
 begin
-  filename := 'D:\Program Files (x86)\Notepad++\Notepad++.exe';
-  parameters := 'D:\Delphi_XE_Projekti\DataSnap_TcpIp\DS\Debug\Win32\DSForma.log';
-  ShellExecute(handle,'open',PChar(filename), PChar(parameters),'',SW_SHOWNORMAL);
+  OpenDialog.DefaultExt := '*.log';
+  OpenDialog.InitialDir := GetCurrentDir();
+  OpenDialog.Execute();
+  ShellExecute(handle,'open',PChar(Parametri.TekstReader), PChar(OpenDialog.FileName),'',SW_SHOWNORMAL);
 end;
 
 procedure TFrmHttpKlijent.btnServerClick(Sender: TObject);
@@ -59,6 +63,16 @@ begin
     FreeAndNil(Server);
   end;
 
+end;
+
+procedure TFrmHttpKlijent.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(Parametri);
+end;
+
+procedure TFrmHttpKlijent.FormShow(Sender: TObject);
+begin
+  Parametri := TParameterFile.Create();
 end;
 
 end.

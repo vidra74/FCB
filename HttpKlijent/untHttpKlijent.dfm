@@ -11,6 +11,8 @@ object FrmHttpKlijent: TFrmHttpKlijent
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnDestroy = FormDestroy
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lblPorukaServer: TLabel
@@ -72,9 +74,12 @@ object FrmHttpKlijent: TFrmHttpKlijent
       'User_Name=HttpKlijent'
       'DSAuthenticationPassword=Klijent'
       'DSAuthenticationUser=Http')
-    Connected = True
     Left = 96
     Top = 80
     UniqueId = '{063DBF86-3B1E-4696-A4E4-99530342AC56}'
+  end
+  object OpenDialog: TOpenDialog
+    Left = 144
+    Top = 80
   end
 end

@@ -1,5 +1,10 @@
 ﻿FCB - Incredible Ping Machine Server & Klijent
 
+27.4.2014
+- Parametrizacijska datoteka D:\Parameter.txt
+- Parametar za čitač log datoteke
+- Otvaranje log datoteke preko Open daloga 
+
 24.4.2014
 - Http klijent otvara automatski Http konekciju
 

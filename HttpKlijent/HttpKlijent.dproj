@@ -53,6 +53,7 @@
 				<Form>FrmHttpKlijent</Form>
 			</DCCReference>
 			<DCCReference Include="untHttpMetode.pas"/>
+			<DCCReference Include="untParametarskaDatoteka.pas"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
